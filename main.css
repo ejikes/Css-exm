@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: #edf2f8;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 100px auto;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+}
+
+.card {
+    background-color:  #fff;
+    box-shadow: rgba(17,12,46,0.15) 0px 48px 100px 0px;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+.head_text{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.about_para {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 90%;
+}
+
+.middle_section {
+    background: rgb(255, 74, 85);
+    color: #fff;
+}
+
+.bottom_section2 {
+    background: hsl(219, 29%, 14%);
+    color: #fff;
+}
+
+.footer_section {
+    background: hsl(217, 19%, 35%);
+    color: #fff;
+    text-align: center;
+}
+
+.footers {
+    margin-left:20px ;
+    margin-right: 20px;
+    padding: 20px;
+    max-width: 1440px;
+    background: hsl(217, 19%, 35%);
+    color: #fff;
+}
+
+
+@media (min-width: 600px) {
+    .container{
+        grid-template-areas:
+        "header header"
+        "middle bottom"
+        "footer footer";
+    }
+    
+    .middle_section {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 300px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .card {
+    text-align: left;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .middle {
+        grid-area: middle;
+    }
+
+    .bottom {
+        grid-area: bottom;
+    }
+}
